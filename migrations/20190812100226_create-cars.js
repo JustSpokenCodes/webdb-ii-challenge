@@ -2,14 +2,14 @@
 exports.up = function(knex) {
     return knex.schema.createTable('users', tbl => {
         tbl.increments();
-        tbl.text('owner',99)
+        tbl.text('VIN',99)
             .unique()
             .notNullable();
-        tbl.text('car', 99)
+        tbl.text('make', 99)
             .notNullable();
-        tbl.text('make')
+        tbl.text('model')
             .notNullable();
-        tbl.integer('car-year')
+        tbl.integer('mileage')
             .notNullable();
     });
 };
